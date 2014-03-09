@@ -1,0 +1,124 @@
+\documentclass[10pt]{book}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{framed}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{makeidx}
+\usepackage{hyperref}  
+\usepackage{tcolorbox}
+\usepackage[tikz]{bclogo}
+\usepackage{lipsum}
+
+\newcommand{\me}{$m$}
+\newcommand{\seg}{$s$}
+\newcommand{\kg}{$Kg$}
+\newcommand{\f}{$f$}
+\newcommand{\inc}{$in$}
+\newcommand{\gr}{$gr$}
+
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{.125in}
+\setlength{\evensidemargin}{.625in}
+\setlength{\textwidth}{6.025in}
+
+\definecolor{bgblue}{RGB}{245,243,253}
+\definecolor{ttblue}{RGB}{91,194,224}
+\definecolor{mycolor}{rgb}{0.122, 0.435, 0.698}% Rule colour
+\definecolor{bggreen}{rgb}{192,216,144}
+\definecolor{bgred}{RGB}{255,150,153}
+
+\theoremstyle{definition}
+
+\newtheorem{xinn}{Pre-requisito}[chapter]
+\newenvironment{prere}
+  {\clubpenalty=10000
+   \begin{xinn}%
+   \mbox{}%
+   %{\color{red}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill}%
+   %\mbox{}\linebreak\ignorespaces}
+  }
+  {%\par\kern2ex\hrule
+   \end{xinn}
+  }
+
+\newtheorem{exinn}{Ejemplo}[chapter]
+
+\newenvironment{example} 
+ {\clubpenalty=10000 \begin{exinn} \mbox{}}
+ {\end{exinn}}
+  %  \mbox{}% 
+  %  {\color{blue}\leaders\hrule height .8ex depth \dimexpr-.8ex+0.8pt\relax\hfill}%
+  % \mbox{}\linebreak\ignorespaces}
+  %{\par\kern2ex\hrule\end{exinn} }
+
+\mdfdefinestyle{mystyle}{
+rightline=true,innerleftmargin=10,innerrightmargin=10,
+outerlinewidth=3pt,topline=false,rightline=true,bottomline=false,
+skipabove=\topsep,skipbelow=\topsep
+}
+
+\makeatletter
+\newcommand{\mybox}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
+  \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,boxrule=0.5pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
+    #1
+  \end{tcolorbox}
+}
+\newcommand{\myboxr}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
+  \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,boxrule=0.5pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
+    #1
+  \end{tcolorbox}
+}
+\newcommand{\myboxg}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
+  \begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,boxrule=0.5pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
+    #1
+  \end{tcolorbox}
+}
+
+\makeindex
+
+\begin{document}
+\title{F\'isica B\'asica: Mec\'anica y Din\'amica }
+\author{A.Ocampo  \\
+{\small\em \copyright \  Draft date \today }}
+\date{ }
+\maketitle
+\addcontentsline{toc}{chapter}{Contents}
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+\Large
+\chapter{Introducci\'on}
+\input{introduccion.tex}
+\chapter{Bases}
+\input{introduccion_bases.tex}
+\section{Sistemas de medida.}
+\input{sistema_metrico_decimal.tex}
+\section{Ordenes de magnitud.}
+\input{orden_magnitud.tex}
+\section{Conversi\'on de unidades.}
+\input{conversion.tex}
+\section{Problemas de estimaci\'on}
+\input{estimaciones.tex}
+\appendix
+\chapter{Tablas completas de los sistemas MKS y Ingl\'es.}
+\input{comp_table.tex}
+\bibliographystyle{amsplain}
+\bibliography{bibliography}
+
+\end{document}

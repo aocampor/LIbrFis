@@ -1,0 +1,74 @@
+\begin{prere}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,boxrule=0.5pt,arc=4pt, left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt] 
+  \textbf{Los pre-requisitos para este tema son:}\\
+  Ser curioso, mas los requisitos de la secci\'on \ref{sec_MKS}.
+\end{tcolorbox} 
+\end{prere}
+Los problemas de Fermi son problemas de estimaci\'on. Son \'utiles para obtener una idea de cantidades que son aparentemente imposibles de calcular de otro modo. Para resolver un problema de fermi se necesita asumir el valor de una o mas cantidades de manera aproximada para luego realizar operaciones matem\'aticas simples que dan una respuesta muy cercana a la realidad en orden de magnitud. 
+\begin{example}
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,boxrule=0.5pt,arc=4pt,left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt]
+Algunos ejemplos son:\\
+\begin{itemize}
+\item Cuantos afinadores de piano hay en chicago?
+\item Cuantas gotas de agua caben en un vaso?
+\item Cuantas posibles parejas sentimentales tienes en la ciudad en la que habitas?
+\item Cuantas veces ha latido tu coraz\'on?
+\item Cuantos vasos de agua caben en una pisc\'ina?
+\item Cuantas personas viven en tu vecindario?
+\item Cuantos m\'edicos hay en tu ciudad?
+\item Cuantas caras haz visto en tu vida?
+\item etc....
+\end{itemize}
+\end{tcolorbox}
+
+\end{example}
+Resolvamos un par de problemas para entender como funciona.\\
+\begin{example}
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,boxrule=0.5pt,arc=4pt,left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt]
+\textbf{Problema:} \textit{Cuantas veces ha latido tu corazón?}\\
+\textbf{Respuesta:}\\ 
+Digamos que hoy es tu cumplea\~nos n\'umero $N$. Sabemos que cada a\~no tiene aproximadamente 365.25 d\'ias ($D_a$), por lo tanto has estado vivo durante $D$ d\'ias \\
+\begin{equation}
+D = N D_{a}.
+\end{equation}
+Asumamos que haces ejercicio $n$ veces por semana, y que cada sesi\'on de ejercício dura aproximadamente $t$ horas. Esto quiere decir que el numero de horas de ejercicio por semanas $n_e$ es:
+\begin{equation}
+n_e = nt.
+\end{equation} 
+Asumamos tambi\'en que durante el tiempo que haces ejercicio tu coraz\'on late $L_{e}$ veces por minuto, y durante el tiempo en el que no te ejercitas tu coraz\'on en reposo late aproximadamente $L_{r}$ veces por minuto. \\
+Recordemos que cada semana tiene $n_d = 7$ d\'ias de $h_d = 24$ horas. Con estos datos sabemos que el numero de horas en una semana es:
+\begin{equation}
+n_s = n_d h_d = 168,
+\end{equation}
+Esto implica que el porcentaje de tiempo $p$ en el que haces ejercicio es aproximadamente las horas de ejercicio por semana sobre el n\'umero de horas en una semana:
+\begin{equation}
+p = \frac{n_e}{n_s}. 
+\end{equation}
+Por lo tanto haz hecho ejercicio durante $D_e$ d\'ias donde
+\begin{equation}
+D_e = D p, 
+\end{equation} 
+y haz estado en reposo durante
+\begin{equation}
+D_r = D - D_e, 
+\end{equation} 
+El n\'umero de latidos que tu coraz\'on ha dado aproximadamente es $N_L$:  
+\begin{equation}
+\label{eq_NLatidosDia}
+N_L = D_e L_{e/dia}  + D_r L_{r/dia}, 
+\end{equation} 
+Como se tiene el numero de latidos por minuto y no por d\'ia, hay que aplicar un factor de conversi\'on. Reemplazando todos los datos que tenemos en la ecuaci\'on \ref{eq_NLatidosDia} obtenemos. 
+\begin{align}
+N_L & = D_e D_m L_e + ( D D_m - D_e D_m ) L_r\\
+    & = D_m (Dp L_e + (D - Dp)L_r)\\
+    & = D D_m ( L_r + p (L_e - L_r ) )
+\end{align}
+donde $D_m$ es el n\'umero de minutos por d\'ia. Supongamos que hoy es tu cumplea\~nos n\'umero 20, que haces ejercicio durante 2 horas 2 veces por semana, que durante el ejercicio tu coraz\'on late en promedia 140 veces por minuto, y que en reposo tu coraz\'on late aproximadamente 90 veces por minuto. Estos datos implican que llevas vivo 7305 d\'ias, haces 4 horas de ejercicio por semana y por lo tanto, el porcentaje de tiempo que haces ejercicio es de $2.3 \%$. Como un dia tiene 1440 minutos, se obtiene que el n\'umero de pulsaciones que has tenido en la vida aproximadamente es de:
+\begin{align*}
+N_L & = 7305 [dias] 1440 [\frac{min}{dias}] ( 90 [\frac{pulsos}{min}] + 0.023 (120 - 90)[\frac{pulsos}{min}] ) \\
+    & = 10519200 [min] 90.69 [\frac{pulsos}{min}]  \\
+    & = 953986248 [pulsos] 
+\end{align*} 
+Lo cual quiere decir que tu coraz\'on ha latido $953\times 10^6$ veces!. Esta estimaci\'on puede hacerse mas precisa, por ejemplo podr\'ias asumir que cuando estas dormido tu coraz\'on late 50 veces por minuto, etc.... sin embargo, esta estimaci\'on es aproximadamente correcta, ya que el orden de magnitud no va a cambiar mucho as\'i seas un deportista.
+\end{tcolorbox}
+\end{example}
