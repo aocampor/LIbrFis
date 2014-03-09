@@ -1,1 +1,50 @@
-conversiones
+\label{sec_Conversion_unidades}
+\begin{prere}
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,boxrule=0.5pt,arc=4pt, left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt] 
+  \textbf{Los pre-requisitos para este tema son:}\\
+  Mirar los pre-requisitos \ref{pre_ord_mag}.
+\end{tcolorbox} 
+\label{pre_Conv_U}
+\end{prere}
+Generalmente para resolver ciertos problemas se necesita cambiar cantidades dadas en un sistema a otro sistema. Por ejemplo cuando hablamos con un anglo parlante y le preguntamos sobre el clima y las temperaturas, muy probablemente tendremos que hacer cambios de grados fahrenheit a grados cent\'igrados, o tendremos que convertir millas en kilometros. A este tipo de operaciones simples se les llama conversi\'on de unidades.\\
+Cualquier cantidad puede ser convertida de un sistema al otro por ejemplo, una medida tomada en pies puede convertirse f\'acilmente en metros y visceversa. Para realizar este tipo de conversi\'on lo \'unico que se necesita es ser cuidadoso y organizado. Se puede no ser ninguna de las dos, en cuyo case se requiere algo de habilidad. Lo primero que se necesita para convertir de una unidad a otra es conocer una equivalencia, por ejemplo, sabemos que 1\m es igual a 100 \cm o que 1 \km es 1.6 millas aproximadamente, o que 1 \ms son 0.001 \s.\\
+Estas equivalencias nos permiten hallar un factor de conversion entre dos cantidades.
+\begin{example}
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,boxrule=0.5pt,arc=4pt,left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt]
+\textbf{Problema:} \textit{La distancia entre Gante B\'elgica y Ginebra suiza es de aproximadamente 804 \km.¿Cuanto es esto en Millas? }\\
+\textbf{Respuesta:}\\ 
+Sabemos que 1.6 \km = 1 \mile, por lo tanto $\frac{1 milla}{1.6 Km} = 1$. Por lo tanto:\\
+\begin{align}
+804 Km & = 804 Km \cdot 1 \\
+       & = 804 \cancel{Km} \frac{1 milla}{1.6 \cancel{Km}}\\
+       & = 502.5 millas
+\end{align}
+\end{tcolorbox}
+\end{example}  
+El ejemplo anterior es el caso m\'as sencillo y m\'as usado. A diario las personas convierten dolares en euros, centigrados en fahrenheit, \km en \mile, galones en litros, etc \ldots\\
+Hay que notar que no se puede converti un metro en un segundo o una temperatura en una distancia etc \ldots , a no ser que exista un factor de conversi\'on que relacione las dos cantidades. Por ejemplo en astrof\'isisca se dan distancias en a\~nos luz, esto solo tiene sentido si se tiene en cuenta que la velocidad de la luz es una constante y por lo tanto se pueden convertir tiempos en distancias multiplicando por la velocidad.\\
+Para hacer conversionas mas compleajas solo basta con aplicar tantos factores de conversi\'on como sean necesarios, Por ejemplo:
+\begin{example}
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,boxrule=0.5pt,arc=4pt,left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt]
+\textbf{Problema:} \textit{Un carro viaja a una rapidez de 120 \km/\h, ¿A Cuanto equivale esto en Millas por hora?, y ¿en $cm$/\s?}\\
+\textbf{Respuesta:}\\ 
+Sabemos que 1.6 \km = 1 \mile, entonces\\
+\begin{align}
+120 \frac{Km}{h} & = 120 \frac{Km}{h} \cdot 1 \\
+                 & = 120 \frac{\cancel{Km}}{h} \frac{1 milla}{1.6 \cancel{Km}} \\ 
+                 & = 75 \frac{millas}{h}
+\end{align}
+\begin{align}
+120 \frac{Km}{h} & = 120 \frac{Km}{h} \cdot 1 \cdot 1 \\
+                 & = 120 \frac{\cancel{Km}}{\cancel{h}} \frac{1000 m}{1 \cancel{Km}}\frac{1 \cancel{h}}{3600 s} \\
+                 & = \frac{120 \cdot 1000 m}{3600 s}
+                 & = 33.3 \frac{m}{s}
+\end{align}
+\end{tcolorbox}
+\end{example}  
+
+
+
+
+
+

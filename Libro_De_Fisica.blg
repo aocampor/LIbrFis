@@ -1,45 +1,46 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Libro_De_Fisica.aux
 The style file: amsplain.bst
 Database file #1: bibliography.bib
 You've used 1 entry,
             2213 wiz_defined-function locations,
-            506 strings with 4129 characters,
-and the built_in function-call counts, 292 in all, are:
-= -- 21
-> -- 13
+            505 strings with 4071 characters,
+and the built_in function-call counts, 244 in all, are:
+= -- 17
+> -- 7
 < -- 0
-+ -- 5
-- -- 4
-* -- 20
-:= -- 53
++ -- 3
+- -- 2
+* -- 12
+:= -- 42
 add.period$ -- 1
 call.type$ -- 1
-change.case$ -- 6
+change.case$ -- 4
 chr.to.int$ -- 0
 cite$ -- 1
-duplicate$ -- 12
+duplicate$ -- 11
 empty$ -- 25
-format.name$ -- 4
-if$ -- 56
+format.name$ -- 2
+if$ -- 47
 int.to.chr$ -- 0
 int.to.str$ -- 1
-missing$ -- 3
+missing$ -- 1
 newline$ -- 13
 num.names$ -- 2
-pop$ -- 7
+pop$ -- 10
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 3
 quote$ -- 0
-skip$ -- 8
+skip$ -- 7
 stack$ -- 0
 substring$ -- 5
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
+type$ -- 4
 warning$ -- 0
 while$ -- 2
 width$ -- 2
-write$ -- 19
+write$ -- 17
